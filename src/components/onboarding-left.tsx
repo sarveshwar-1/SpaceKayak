@@ -17,7 +17,7 @@ function OnboardingLeft() {
               color: "",
             }}
           >
-            First, let's
+            First, let&apos;s
           </div>
           <div
             className="text-5xl font-light mb-1 "
