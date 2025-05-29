@@ -6,35 +6,38 @@ import { CornerDownLeft } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className=" bg-gray-50">
+    <div className="bg-gray-50">
       <header className="bg-[#1e3b23] text-white">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl text-[#e2d1c1]">Ingredia</h1>
+            <h1 className="text-lg sm:text-xl lg:text-2xl text-[#e2d1c1]">
+              Ingredia
+            </h1>
 
-            <div className="flex-1 max-w-2xl mx-8 bg-[#eeede5]">
+            <div className="flex-1 max-w-2xl mx-2 sm:mx-4 lg:mx-8 bg-[#eeede5] hidden sm:block">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 " />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 sm:w-5 sm:h-5" />
                 <input
                   type="text"
                   placeholder="Recipes/ingredients/what's in your fridge"
-                  className="w-full pl-10 pr-12 py-3  text-gray-800 placeholder-gray-500"
+                  className="w-full pl-8 sm:pl-10 pr-10 sm:pr-12 py-2 sm:py-3 text-sm sm:text-base text-gray-800 placeholder-gray-500"
                 />
-                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
-                  <Camera className="text-gray-400 w-5 h-5 cursor-pointer hover:text-gray-600" />
-                  <CornerDownLeft className="text-gray-400 w-5 h-5 cursor-pointer hover:text-gray-600" />
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-1 sm:space-x-2">
+                  <Camera className="text-gray-400 w-4 h-4 sm:w-5 sm:h-5 cursor-pointer hover:text-gray-600" />
+                  <CornerDownLeft className="text-gray-400 w-4 h-4 sm:w-5 sm:h-5 cursor-pointer hover:text-gray-600" />
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <div className="w-8 h-8 flex items-center justify-center rounded-lg">
+            <div className="flex items-center space-x-1 sm:space-x-2 lg:space-x-4">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 flex items-center justify-center rounded-lg">
                 <span className="text-xs font-bold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
+                    width="20"
+                    height="20"
                     viewBox="0 0 32 32"
+                    className="sm:w-6 sm:h-6 lg:w-8 lg:h-8"
                   >
                     <rect
                       x="1"
@@ -98,41 +101,57 @@ const Navbar = () => {
                   </svg>
                 </span>
               </div>
-              <div className="w-8 h-8  rounded-full flex items-center justify-center overflow-hidden">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 rounded-full flex items-center justify-center overflow-hidden">
                 <Image
                   src="/images/chef-icon.png"
                   alt="Chef profile"
-                  width={32}
-                  height={32}
-                  className="object-cover"
+                  width={24}
+                  height={24}
+                  className="object-cover sm:w-6 sm:h-6 lg:w-8 lg:h-8"
                 />
               </div>
             </div>
           </div>
 
-          <nav className="mt-6 flex justify-center items-center">
-            <div className="flex space-x-8 w-2xl justify-between">
+          {/* Mobile search bar */}
+          <div className="mt-4 bg-[#eeede5] sm:hidden">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Recipes/ingredients/what's in your fridge"
+                className="w-full pl-10 pr-12 py-3 text-gray-800 placeholder-gray-500"
+              />
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
+                <Camera className="text-gray-400 w-5 h-5 cursor-pointer hover:text-gray-600" />
+                <CornerDownLeft className="text-gray-400 w-5 h-5 cursor-pointer hover:text-gray-600" />
+              </div>
+            </div>
+          </div>
+
+          <nav className="mt-4 sm:mt-6 flex justify-center items-center ">
+            <div className="flex space-x-2 sm:space-x-4 lg:space-x-8 w-xl justify-between overflow-x-auto pb-2">
               <a
                 href="#"
-                className="text-white hover:text-green-200 font-medium"
+                className="text-white hover:text-green-200 font-medium whitespace-nowrap text-sm sm:text-base"
               >
                 Recipes
               </a>
               <a
                 href="#"
-                className="text-white hover:text-green-200 font-medium"
+                className="text-white hover:text-green-200 font-medium whitespace-nowrap text-sm sm:text-base"
               >
                 Occasions
               </a>
               <a
                 href="#"
-                className="text-white hover:text-green-200 font-medium"
+                className="text-white hover:text-green-200 font-medium whitespace-nowrap text-sm sm:text-base"
               >
                 Goals
               </a>
               <a
                 href="#"
-                className="text-white hover:text-green-200 font-medium"
+                className="text-white hover:text-green-200 font-medium whitespace-nowrap text-sm sm:text-base"
               >
                 Creators
               </a>
@@ -141,24 +160,32 @@ const Navbar = () => {
         </div>
       </header>
 
-      <div className="bg-[#abd27a] py-4">
-        <div className=" w-[100%] flex justify-center items-center">
-          <div className="flex items-center space-x-8">
-            <span className=" text-gray-900 font-bold">Popular topic:</span>
-            <div className="flex items-center space-x-6">
-              <span className="text-gray-600  hover:text-green-900 cursor-pointer">
+      <div className="bg-[#abd27a] py-2 sm:py-4">
+        <div className="w-full flex justify-center items-center px-2 sm:px-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-8 overflow-x-auto pb-2">
+            <span className="text-gray-900 font-bold whitespace-nowrap text-sm sm:text-base">
+              Popular topic:
+            </span>
+            <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-6">
+              <span className="text-gray-600 hover:text-green-900 cursor-pointer whitespace-nowrap text-sm sm:text-base">
                 Refresh and Refuel
               </span>
-              <span className="text-gray-600 font-bold">•</span>
-              <span className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              <span className="text-gray-600 font-bold hidden sm:inline">
+                •
+              </span>
+              <span className="text-gray-600 hover:text-gray-900 cursor-pointer whitespace-nowrap text-sm sm:text-base">
                 Summer Fit
               </span>
-              <span className="text-gray-600 font-bold">•</span>
-              <span className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              <span className="text-gray-600 font-bold hidden sm:inline">
+                •
+              </span>
+              <span className="text-gray-600 hover:text-gray-900 cursor-pointer whitespace-nowrap text-sm sm:text-base">
                 Heart Healthy
               </span>
-              <span className="text-gray-600 font-bold">•</span>
-              <span className="text-gray-600 hover:text-green-900 cursor-pointer">
+              <span className="text-gray-600 font-bold hidden md:inline">
+                •
+              </span>
+              <span className="text-gray-600 hover:text-green-900 cursor-pointer whitespace-nowrap text-sm sm:text-base hidden md:inline">
                 Insta Worthy
               </span>
             </div>
