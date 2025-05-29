@@ -200,16 +200,16 @@ function OnboardingRight() {
             onClick={() => {
               router.push("/home");
             }}
-            className="bg-[#fdf6ed] border border-gray-900 hover:bg-black transition-colors"
-            textcolor="text-black hover:text-inherit"
+            className="bg-[#fdf6ed] border border-gray-900 hover:bg-gray-100 hover:border-gray-700 cursor-pointer transition-colors"
+            textcolor="text-black "
           />
           <ArrowButton
             text="NEXT"
             onClick={() => {
               router.push("/home");
             }}
-            className="bg-black border border-gray-900 hover:bg-[#fdf6ed] transition-colors"
-            textcolor="text-inherit hover:text-black"
+            className="bg-black border border-gray-900 hover:bg-gray-800 hover:border-gray-600 cursor-pointer transition-colors"
+            textcolor="text-inherit"
           />
         </div>
       </div>

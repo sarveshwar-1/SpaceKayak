@@ -3,6 +3,7 @@ import Image from "next/image";
 import FoodCard from "./food-card";
 import { LayoutGrid } from "lucide-react";
 import DesertCard from "./desert-card";
+import ArrowButton from "./ui/arrow-button";
 
 const FooterMain = () => {
   const foods = [
@@ -44,7 +45,7 @@ const FooterMain = () => {
     },
   ];
   return (
-    <div className="bg-[rgb(238,237,229)] col-span-8 flex flex-col pt-4">
+    <div className="bg-[rgb(238,237,229)] col-span-8 flex flex-col pt-4 relative">
       <div className="flex-col items-center ">
         <span
           className="p-4 text-black text-xl"
@@ -105,11 +106,18 @@ const FooterMain = () => {
           <FoodCard />
         </div>
         <div className="grid grid-cols-5 gap-4 p-4">
-          {Array.from({ length: 5 }).map((_, i) => (
+          {Array.from({ length: 15 }).map((_, i) => (
             <DesertCard key={i} />
           ))}
         </div>
       </div>
+    <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[rgb(238,237,229)] via-[rgba(238,237,229,0.8)] via-[rgba(238,237,229,0.4)] to-transparent pointer-events-none">
+        <ArrowButton 
+            text="VIEW ALL RECIPES" 
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 border border-black hover:border-gray-500 hover:bg-white/10 transition-all duration-200 group cursor-pointer pointer-events-auto" 
+            textcolor="text-gray-700 group-hover:text-black"
+        />
+    </div>
     </div>
   );
 };
