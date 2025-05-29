@@ -4,19 +4,14 @@ import { Search } from "lucide-react";
 import { Camera } from "lucide-react";
 import { CornerDownLeft } from "lucide-react";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
     <div className=" bg-gray-50">
-      {/* Header */}
       <header className="bg-[#1e3b23] text-white">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <h1 className="text-2xl text-[#e2d1c1]">Ingredia</h1>
 
-            {/* Search Bar */}
             <div className="flex-1 max-w-2xl mx-8 bg-[#eeede5]">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 " />
@@ -32,7 +27,6 @@ const Navbar = (props: Props) => {
               </div>
             </div>
 
-            {/* Profile Icons */}
             <div className="flex items-center space-x-4">
               <div className="w-8 h-8 flex items-center justify-center rounded-lg">
                 <span className="text-xs font-bold">
@@ -116,7 +110,6 @@ const Navbar = (props: Props) => {
             </div>
           </div>
 
-          {/* Navigation */}
           <nav className="mt-6 flex justify-center items-center">
             <div className="flex space-x-8 w-2xl justify-between">
               <a
@@ -148,7 +141,6 @@ const Navbar = (props: Props) => {
         </div>
       </header>
 
-      {/* Popular Topics Bar */}
       <div className="bg-[#abd27a] py-4">
         <div className=" w-[100%] flex justify-center items-center">
           <div className="flex items-center space-x-8">

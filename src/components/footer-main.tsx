@@ -54,7 +54,7 @@ const FooterMain = () => {
             color: "#000000",
           }}
         >
-          What's in your Fridge?
+          What&apos;s in your Fridge?
         </span>
         <div className="flex justify-evenly items-center w-full p-4">
           {foods.map((food, index) => (
@@ -105,9 +105,9 @@ const FooterMain = () => {
           <FoodCard />
         </div>
         <div className="grid grid-cols-5 gap-4 p-4">
-            {Array.from({ length: 5 }).map((_, i) => (
-                <DesertCard key={i} />
-            ))}
+          {Array.from({ length: 5 }).map((_, i) => (
+            <DesertCard key={i} />
+          ))}
         </div>
       </div>
     </div>

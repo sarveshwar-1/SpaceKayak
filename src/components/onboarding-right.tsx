@@ -7,25 +7,21 @@ import Input from "./ui/input";
 type Tags = {
   servings: string;
   measurement: string;
-  diet: [string];
-  allergies: [string];
+  diet: string[];
+  allergies: string[];
   skillLevel: string;
-  appliances: [string];
+  appliances: string[];
 };
 
 function OnboardingRight() {
   const [selectedTags, setSelectedTags] = useState<Tags>({
     servings: "",
     measurement: "",
-    diet: [""],
-    allergies: [""],
+    diet: [],
+    allergies: [],
     skillLevel: "",
-    appliances: [""],
+    appliances: [],
   });
-  const handleServingsChange = (value: string) => {
-    setSelectedTags((prev) => ({ ...prev, servings: value }));
-  };
-
   const handleMeasurementChange = (value: string) => {
     setSelectedTags((prev) => ({ ...prev, measurement: value }));
   };
@@ -201,13 +197,17 @@ function OnboardingRight() {
         <div className="mt-8 flex justify-evenly items-center">
           <ArrowButton
             text="SKIP FOR NOW"
-            onClick={() => {router.push("/home")}}
+            onClick={() => {
+              router.push("/home");
+            }}
             className="bg-[#fdf6ed] border border-gray-900 hover:bg-black transition-colors"
             textcolor="text-black hover:text-inherit"
           />
           <ArrowButton
             text="NEXT"
-            onClick={() => {router.push("/home")}}
+            onClick={() => {
+              router.push("/home");
+            }}
             className="bg-black border border-gray-900 hover:bg-[#fdf6ed] transition-colors"
             textcolor="text-inherit hover:text-black"
           />
