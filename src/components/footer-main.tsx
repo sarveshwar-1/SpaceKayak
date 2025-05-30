@@ -58,7 +58,7 @@ const FooterMain = () => {
           What&apos;s in your Fridge?
         </span>
         <div className="flex justify-center sm:justify-evenly items-center w-full p-2 sm:p-4 overflow-x-auto">
-          <div className="flex gap-2 sm:gap-4 min-w-max">
+          <div className="flex gap-2 sm:gap-4 w-full justify-evenly items-center">
             {foods.map((food, index) => (
               <div key={index} className="flex flex-col items-center">
                 <Image
